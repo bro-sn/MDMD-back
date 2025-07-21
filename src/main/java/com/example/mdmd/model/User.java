@@ -1,41 +1,37 @@
+package com.example.mdmd.model;
+
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Data;
+
+import java.time.LocalDateTime;
 
 @Entity(name = "Table_User")
+@Data
 public class User {
     @Id
     private Long id;
 
     @Column(nullable = false)
-    String userid;
+    private String userid;
 
     @Column(nullable = false)
-    String password;
+    private String password;
 
     @Column(nullable = false)
-    String nickname;
+    private String nickname;
+
+    @Column(nullable = false)
+    private String job;
+
+    private int achievementRate;
+    private String homeAddress;
+    private LocalDateTime wakeUpTime;
+    private LocalDateTime plannedSleepTime;
+    private int year;
+    private int month;
+    private int day;
 
 
-    @Column(nullable = true)
-    String job;
-
-    @Column(nullable = true)
-    int achievementRate;
-
-    @Column(nullable = true)
-    String homeAddress;
-
-    @Column(nullable = true)
-    Time wakeUpTime;
-
-    @Column(nullable = true)
-    Time plannedSleepTime;
-
-    @Column(nullable = true)
-    int year;
-
-    @Column(nullable = true)
-    int month;
-
-    @Column(nullable = true)
-    int day;
 }
