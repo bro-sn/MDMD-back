@@ -17,9 +17,9 @@ import lombok.Data;
 
 public class User {
     @Id
-    @Column(name="ID")
+    @Column(name="ID", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long ID;
 
     @Column(name="userId", nullable = false)
     private String userId;
@@ -33,28 +33,28 @@ public class User {
     @Column(name="job", nullable = false)
     private String job;
 
-    @Column(nullable = false)
+    @Column
     private String favoriteFood;
 
-    @Column(nullable = false)
+    @Column
     private int achievementRate;
 
-    @Column(nullable = false)
+    @Column
     private String homeAddress;
 
-    @Column(nullable = false)
+    @Column
     private LocalDateTime wakeUpTime;
 
-    @Column(nullable = false)
+    @Column
     private LocalDateTime plannedSleepTime;
 
-    @Column(nullable = false)
+    @Column
     private int year;
 
-    @Column(nullable = false)
+    @Column
     private int month;
 
-    @Column(nullable = false)
+    @Column
     private int day;
 
     
