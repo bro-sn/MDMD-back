@@ -9,7 +9,7 @@ import java.util.Date;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long Id;
+    private Long Id;
 
     @Column(name = "userId", nullable = false, unique = true)
     private String userId;
@@ -32,11 +32,11 @@ public class User {
     private String homeAddress;
 
     @Column(name = "plannedSleepTime")
-    @Temporal(TemporalType.TIME)
+//    @Temporal(TemporalType.TIME)
     private LocalDateTime plannedSleepTime;
 
     @Column(name = "wakeUpTime")
-    @Temporal(TemporalType.DATE)
+//    @Temporal(TemporalType.DATE)
     private Date wakeUpTime;
 
     @Column(name = "year")
