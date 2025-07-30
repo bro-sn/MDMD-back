@@ -20,7 +20,7 @@ public class sdController {
     }
     @Setter
     @Getter
-    static class Book{
+    class Book{
         private String name;
         private int num;
 

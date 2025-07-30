@@ -1,0 +1,27 @@
+<html xmlns:th="http://thymeleaf.org">
+
+<h2>PlusA.html</h2>
+
+<hr>
+<br>
+
+<body style="text-align: center;">
+
+<th:block th:each = "pageNum : ${#numbers.sequence(1,10)}" >
+    <a th:if="${pageNum}!=${page}" th:href="@{/PlusA(page=${pageNum})}" th:text="${pageNum}"></a>
+    <label th:unless="${pageNum}!=${page}" th:text="${pageNum}" style="font-size: large"></label>
+
+</th:block>
+<br>
+<h2 th:text = "@{|현재 페이지 : ${page} |}"></h2>
+
+
+
+</body>
+
+<div>
+</div>
+
+
+</html>
+
