@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class hsController {
+public class HsController {
 
 //    localhost:8080/url에 접속 할 이름 (여기서는 hs)
     @GetMapping("hs")
