@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>책 등록</title>
+    </head>
+    <body>
+        <h2>책 정보 입력</h2>
+        <form action="/prac" method="post" th:object="${book}">
+            제목: <input type="text" th:field="*{title}" /><br/>
+            저자: <input type="text" th:field="*{author}" /><br/>
+            출판사: <input type="text" th:field="*{publisher}" /><br/>
+            <button type="submit">저장</button>
+        </form>
+
+        <hr/>
+
+        <h3>저장된 책 목록</h3>
+        <ul>
+            <li th:each="b : ${bookList}">
+                <form action="/prac" method="get">
+                    <input type="hidden" name="id" th:value="${b.id}" />
+                    <button type="submit" th:text="${b.title}"></button>
+                </form>
+            </li>
+        </ul>
+
+        <hr/>
+
+        <div th:if="${selectedBook != null}">
+            <h3>선택된 책 정보</h3>
+            제목: <span th:text="${selectedBook.title}"></span><br/>
+            저자: <span th:text="${selectedBook.author}"></span><br/>
+            출판사: <span th:text="${selectedBook.publisher}"></span><br/>
+        </div>
+    </body>
+</html>
