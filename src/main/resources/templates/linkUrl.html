@@ -1,0 +1,7 @@
+<th:block th:each="pageNumber : ${#numbers.sequence(1, 10)}">
+    <th:block th:if = "${pageNumber == page}">
+        <span th:text= "${pageNumber}"></span>
+    </th:block>
+    <th:block th:if = "${pageNumber != page}">
+        <a th:href="@{/linkUrl(page=${pageNumber})}" th:text="${pageNumber}"></a>
+</th:block>

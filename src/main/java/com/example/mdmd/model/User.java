@@ -9,12 +9,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
 @Table(name="User")
 @Entity
-
+@Data
 public class User {
     @Id
     @Column(name="ID", nullable = false)
@@ -56,10 +58,6 @@ public class User {
 
     @Column
     private int day;
-
-    
-   
-    
     
 
     

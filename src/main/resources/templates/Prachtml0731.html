@@ -1,0 +1,14 @@
+<head>
+    <title>0731연습</title>
+</head>
+<body>
+    <h2>명함</h2>
+    <form th:action="@{/prac}" th:object="${prac}" method="post">
+        이름: <input type="text" th:field="*{Name}" required /><br/>
+        나이: <input type="number" th:field="*{Age}" /><br/>
+        직업: <input type="text" th:field="*{Job}" /><br/>
+        전화번호: <input type="text" th:field="*{Phone}" /><br/>
+        <button type="submit">저장</button>
+    </form>
+</body>
+</html>

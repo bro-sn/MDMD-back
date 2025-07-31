@@ -1,7 +1,5 @@
 package com.example.mdmd.model;
 
-import java.time.LocalDateTime;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,22 +9,26 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name="UserFeedback")
 @Data
-public class UserFeedback {
+@Table(name="Prac")
+public class Prac {
     @Id
     @Column(name="ID", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
 
     @Column(nullable = false)
-    private String FeedBack;
+    private String Name;
 
     @Column
-    private String Memo;
+    private int Age;
 
-    @Column(nullable = false)
-    private LocalDateTime Date;
+    @Column
+    private String Job;
+
+    @Column
+    private String Phone;
 
     
 }
+
